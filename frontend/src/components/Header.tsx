@@ -13,7 +13,7 @@ export default function Header() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-        <h1>CloudLife</h1>
+        <h1 className="text-[#495057]">CloudLife</h1>
           {/* <Image
             src="/images/logo.png"
             alt="DoctorApp Logo"
@@ -40,10 +40,11 @@ export default function Header() {
 
         {/* Ícone do Menu Hambúrguer */}
         <button
-          className="md:hidden p-2"
+          className="md:hidden p-2 text-[#495057]"
+          
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          {menuOpen ? <X size={28} color="#6C757D" /> : <Menu size={28} />}
         </button>
       </div>
 
@@ -54,7 +55,7 @@ export default function Header() {
         } transition-transform duration-300 md:hidden`}
       >
         <button
-          className="absolute top-4 right-4 p-2"
+          className="absolute top-4 right-4 p-2 text-[#495057]"
           onClick={() => setMenuOpen(false)}
         >
           <X size={28} />
